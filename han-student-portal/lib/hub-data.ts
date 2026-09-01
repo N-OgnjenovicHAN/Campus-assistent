@@ -5,10 +5,11 @@
 export const externalLinks = {
   rooster: 'https://han.myx.nl/roster/overview/schedule/0',
   absentie: 'https://www.haninsite.nl',
-  brightspace: 'https://brightspace.han.nl',
+  brightspace: 'https://www.han.nl/onderwijsondersteuning/tools/brightspace/',
   osiris: 'https://osiris.han.nl',
   events: 'https://www.han.nl/studeren/studentenleven/',
-  insite: 'https://www.haninsite.nl',
+  insite: 'https://www1.han.nl/insite/studenten/',
+  iSAS: 'https://isas.han.nl/Default.aspx?F=Home&DT=120603383',
 } as const
 
 /* ---------------------------------- Rooster --------------------------------- */
