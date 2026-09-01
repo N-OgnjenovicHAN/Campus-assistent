@@ -22,9 +22,7 @@ export interface Lesson {
   start: string
   end: string
   course: string
-  type: LessonType
   room: string
-  building: string
   teacher: string
 }
 
