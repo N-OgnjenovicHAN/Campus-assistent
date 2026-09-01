@@ -22,9 +22,7 @@ export interface Lesson {
   start: string
   end: string
   course: string
-  type: LessonType
   room: string
-  building: string
   teacher: string
 }
 
@@ -44,14 +42,6 @@ export const rooster: Lesson[] = [
   { id: '21', day: 'Donderdag', start: '09:00', end: '12:15', course: 'ICTJOU01', room: 'B2.80', teacher: 'JNRB, VSCHJ' },
   { id: '22', day: 'Donderdag', start: '13:00', end: '14:30', course: 'Begeleid werken'}
 ]
-
-export const lessonTypeLabels: Record<LessonType, string> = {
-  college: 'Hoorcollege',
-  werkcollege: 'Werkcollege',
-  practicum: 'Practicum',
-  tentamen: 'Tentamen',
-  project: 'Project',
-}
 
 /* --------------------------- Deadlines & voortgang -------------------------- */
 
