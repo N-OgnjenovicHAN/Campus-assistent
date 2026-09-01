@@ -3,7 +3,7 @@
 // vandaar dat we hier een eigen weergave tonen én naar de echte bron linken.
 
 export const externalLinks = {
-  rooster: 'https://myx.han.nl',
+  rooster: 'https://han.myx.nl/roster/overview/schedule/0',
   absentie: 'https://www.haninsite.nl',
   brightspace: 'https://brightspace.han.nl',
   osiris: 'https://osiris.han.nl',
