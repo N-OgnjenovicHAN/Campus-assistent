@@ -31,15 +31,18 @@ export interface Lesson {
 export const weekDays = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag'] as const
 
 export const rooster: Lesson[] = [
-  { id: 'l1', day: 'Maandag', start: '09:00', end: '10:30', course: 'Softwarekwaliteit', type: 'college', room: 'D2.14', building: 'Ruitenberglaan 26', teacher: 'M. Jansen' },
-  { id: 'l2', day: 'Maandag', start: '11:00', end: '12:30', course: 'Softwarekwaliteit', type: 'werkcollege', room: 'D1.08', building: 'Ruitenberglaan 26', teacher: 'M. Jansen' },
-  { id: 'l3', day: 'Maandag', start: '13:30', end: '15:30', course: 'Databases', type: 'practicum', room: 'C0.21', building: 'Ruitenberglaan 31', teacher: 'S. de Vries' },
-  { id: 'l4', day: 'Dinsdag', start: '09:00', end: '11:00', course: 'Project Fullstack', type: 'project', room: 'A3.05', building: 'Kapittelweg 33', teacher: 'K. Bakker' },
-  { id: 'l5', day: 'Dinsdag', start: '13:00', end: '14:30', course: 'Statistiek', type: 'college', room: 'D2.14', building: 'Ruitenberglaan 26', teacher: 'L. Peters' },
-  { id: 'l6', day: 'Woensdag', start: '10:00', end: '12:00', course: 'Webontwikkeling', type: 'practicum', room: 'C0.18', building: 'Ruitenberglaan 31', teacher: 'T. Smit' },
-  { id: 'l7', day: 'Donderdag', start: '09:00', end: '10:30', course: 'Bedrijfskunde', type: 'college', room: 'B1.12', building: 'Kapittelweg 33', teacher: 'R. Willems' },
-  { id: 'l8', day: 'Donderdag', start: '11:00', end: '13:00', course: 'Project Fullstack', type: 'project', room: 'A3.05', building: 'Kapittelweg 33', teacher: 'K. Bakker' },
-  { id: 'l9', day: 'Vrijdag', start: '09:00', end: '11:00', course: 'Databases', type: 'tentamen', room: 'D0.01', building: 'Ruitenberglaan 26', teacher: 'S. de Vries' },
+  { id: 'l1', day: 'Maandag', start: '09:00', end: '10:30', course: 'Aftrap Propedeuse', room: 'B1.12', teacher: 'HLWNM, JNRB, NHFB, SMSMH, VSCHJ' },
+  { id: 'l2', day: 'Maandag', start: '10:45', end: '12:15', course: 'ICTJOU01', room: 'B2.80', teacher: 'JNRB, VSCHJ' },
+  { id: 'l3', day: 'Maandag', start: '13:00', end: '14:30', course: 'Begeleid werken'}
+  { id: '14', day: 'Maandag', start: '14;30', end: '15:15', course: 'Aftrap propedeuse'}
+  { id: 'l5', day: 'Dinsdag', start: '09:00', end: '12:15', course: 'ICTJOU01', room: 'B2.80', teacher: 'JNRB, VSCHJ' },
+  { id: 'l6', day: 'Dinsdag', start: '13:00', end: '14:30', course: 'Begeleid werken'}
+  { id: '17', day: 'Dinsdag', start: '14;30', end: '15:15', course: 'Aftrap propedeuse'}
+  { id: 'l8', day: 'Woensdag', start: '09:00', end: '12:15', course: 'ICTJOU01', room: 'B2.80', teacher: 'JNRB, VSCHJ' },
+  { id: 'l9', day: 'Woensdag', start: '13:00', end: '14:30', course: 'Begeleid werken'}
+  { id: '20', day: 'Woensdag', start: '14;30', end: '15:15', course: 'Aftrap propedeuse'}
+  { id: '21', day: 'Donderdag', start: '09:00', end: '12:15', course: 'ICTJOU01', room: 'B2.80', teacher: 'JNRB, VSCHJ' },
+  { id: '22', day: 'Donderdag', start: '13:00', end: '14:30', course: 'Begeleid werken'}
 ]
 
 export const lessonTypeLabels: Record<LessonType, string> = {
