@@ -43,14 +43,6 @@ export const rooster: Lesson[] = [
   { id: '22', day: 'Donderdag', start: '13:00', end: '14:30', course: 'Begeleid werken'}
 ]
 
-export const lessonTypeLabels: Record<LessonType, string> = {
-  college: 'Hoorcollege',
-  werkcollege: 'Werkcollege',
-  practicum: 'Practicum',
-  tentamen: 'Tentamen',
-  project: 'Project',
-}
-
 /* --------------------------- Deadlines & voortgang -------------------------- */
 
 export type DeadlineSource = 'Brightspace' | 'Osiris'
