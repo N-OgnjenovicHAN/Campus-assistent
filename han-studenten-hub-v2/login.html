@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAN Studenten Hub – Inloggen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Ik sta hier alleen dingen te proberen, trust the process-->
+<body class="achtergrond login-achtergrond">
+
+    <div class="login-kaart">
+        <div class="login-logo">HAN</div>
+        <h1 class="login-titel">Studenten Hub</h1>
+        <p class="login-sub">Log in met je HAN-account om verder te gaan.</p>
+
+        <button type="button" class="login-app-knop" id="han-app-knop">
+            <span class="vinkje-app">HAN</span>
+            Inloggen met HAN-account
+        </button>
+
+        <div class="login-scheiding">of met studentnummer</div>
+
+        <form class="login-form" id="login-form">
+            <div class="form-veld">
+                <label class="form-label" for="studentnummer">Studentnummer</label>
+                <input class="form-input" type="text" id="studentnummer" name="studentnummer" placeholder="1234567" inputmode="numeric" required>
+            </div>
+            <div class="form-veld" style="margin-bottom:0.5rem;">
+                <label class="form-label" for="wachtwoord">Wachtwoord</label>
+                <input class="form-input" type="password" id="wachtwoord" name="wachtwoord" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+            </div>
+            <button type="submit" class="knop knop-primair login-knop">Inloggen</button>
+            <p class="login-status" id="login-status"></p>
+        </form>
+
+        <p class="login-footnote">Demo-omgeving. Dit scherm controleert geen echt wachtwoord en is niet gekoppeld aan echte HAN-systemen &mdash; het laat alleen zien hoe de inlogflow eruit zou zien.</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // De grote "Inloggen met HAN-account"-knop doet hetzelfde als het formulier:
+        // gewoon doorsturen naar het dashboard (geen echte HAN-koppeling mogelijk
+        // zonder server).
+        document.getElementById('han-app-knop').addEventListener('click', function () {
+            document.getElementById('login-status').textContent = 'Bezig met inloggen...';
+            setTimeout(function () {
+                try { localStorage.setItem('han_hub_ingelogd', '1'); } catch (e) {}
+                window.location.href = 'main.html';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

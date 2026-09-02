@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <script>if(!localStorage.getItem('han_hub_ingelogd')){location.replace('login.html');}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAN Studenten Hub – Extra activiteiten</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Ik sta hier alleen dingen te proberen, trust the process-->
+<body class="achtergrond">
+
+    <header class="top-bar">
+        <button class="menu-toggle" aria-label="Menu openen">&#9776;</button>
+        <div class="items-top-bar">
+            <span class="HAN-logo">HAN</span>
+            <span class="tekst-ernaast">Extra Activiteiten</span>
+        </div>
+    </header>
+
+    <div class="menu-overlay verborgen"></div>
+
+    <header class="side-menu">
+        <div class="menu-merk">
+            <span class="HAN-logo">HAN</span>
+            <div class="menu-merk-tekst">
+                <p class="menu-merk-titel">Studenten Hub</p>
+                <p class="menu-merk-sub">HAN University</p>
+            </div>
+        </div>
+        <nav class="dashboard-nav">
+            <button class="dashboard-button">
+                <a href="main.html">Dashboard</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Profiel.html">Profiel</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="https://han.myx.nl/roster/overview/schedule/0" target="_blank" rel="noopener">Rooster</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Plattegrond.html">Plattegrond</a>
+            </button>
+            <button class="dashboard-button actief">
+                <a href="Activiteiten.html">Extra Activiteiten</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Assistent.html">AI-Assistent</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Apps.html">Apps</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Studentenkamers.html">Studentenkamers</a>
+            </button>
+        </nav>
+        <div class="menu-voettekst">
+            Studenten Hub · voorbeeldweergave. Ingelogde data komt uit myX, Brightspace &amp; OSIRIS.<br>
+            <a href="#" class="uitlog-link" style="color:var(--rood); font-weight:700;">Uitloggen</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <main class="main-content">
+
+            <div class="content-topbar">
+                <div class="content-topbar-links">
+                    <span class="HAN-logo">HAN</span>
+                    <span class="content-topbar-merk">HAN Studenten Hub</span>
+                </div>
+                <a class="profiel-chip" href="Profiel.html">
+                    <span class="profiel-chip-avatar">SB</span>
+                    <span class="profiel-chip-naam">Sam de Boer</span>
+                </a>
+            </div>
+
+            <div class="pagina-header">
+                <div>
+                    <h1 class="pagina-titel">Extra activiteiten</h1>
+                    <p class="pagina-beschrijving">Workshops, sport, borrels en carrière-events op de HAN campus. Alle activiteiten via HAN campus events en HAN insite.</p>
+                </div>
+                <div class="knop-rij">
+                    <a class="knop knop-primair" href="https://www.han.nl/studeren/studentenleven/" target="_blank" rel="noopener">HAN campus events &#8599;</a>
+                </div>
+            </div>
+
+            <div class="filterpillen" id="activiteiten-filters">
+                <button class="filterpil actief" data-value="alles">Alles</button>
+                <button class="filterpil" data-value="workshop">Workshop</button>
+                <button class="filterpil" data-value="sport">Sport</button>
+                <button class="filterpil" data-value="sociaal">Sociaal</button>
+                <button class="filterpil" data-value="carrière">Carrière</button>
+                <button class="filterpil" data-value="lezing">Lezing</button>
+            </div>
+
+            <div class="grid-2">
+                <div class="kaart event-item" data-categorie="carrière">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span class="badge badge-bezet">Carrière</span>
+                        <span style="font-size:0.76rem; font-weight:600; color:var(--tekst-zwak);">wo 2 sep</span>
+                    </div>
+                    <h3 style="margin:0; font-size:1rem;">Career Café: solliciteren in tech</h3>
+                    <p style="margin:0.4rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">Netwerk met bedrijven uit de regio en verbeter je cv en pitch.</p>
+                    <div style="margin-top:0.75rem; border-top:1px solid var(--rand-kleur); padding-top:0.6rem; font-size:0.82rem; color:var(--tekst-zwak); display:flex; flex-direction:column; gap:0.25rem;">
+                        <span>&#128337; 16:00 uur</span>
+                        <span>&#128205; Kantine · Ruitenberglaan 26</span>
+                    </div>
+                </div>
+
+                <div class="kaart event-item" data-categorie="sociaal">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span class="badge badge-primair">Sociaal</span>
+                        <span style="font-size:0.76rem; font-weight:600; color:var(--tekst-zwak);">do 3 sep</span>
+                    </div>
+                    <h3 style="margin:0; font-size:1rem;">Bordspellenavond</h3>
+                    <p style="margin:0.4rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">Gezellige avond met snacks, drankjes en tientallen bordspellen.</p>
+                    <div style="margin-top:0.75rem; border-top:1px solid var(--rand-kleur); padding-top:0.6rem; font-size:0.82rem; color:var(--tekst-zwak); display:flex; flex-direction:column; gap:0.25rem;">
+                        <span>&#128337; 19:00 uur</span>
+                        <span>&#128205; Student Lounge</span>
+                    </div>
+                </div>
+
+                <div class="kaart event-item" data-categorie="workshop">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span class="badge badge-info">Workshop</span>
+                        <span style="font-size:0.76rem; font-weight:600; color:var(--tekst-zwak);">vr 4 sep</span>
+                    </div>
+                    <h3 style="margin:0; font-size:1rem;">Workshop Design Thinking</h3>
+                    <p style="margin:0.4rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">Leer in 2 uur de basis van design thinking met een echte case.</p>
+                    <div style="margin-top:0.75rem; border-top:1px solid var(--rand-kleur); padding-top:0.6rem; font-size:0.82rem; color:var(--tekst-zwak); display:flex; flex-direction:column; gap:0.25rem;">
+                        <span>&#128337; 13:00 uur</span>
+                        <span>&#128205; A3.05 · Kapittelweg 33</span>
+                    </div>
+                </div>
+
+                <div class="kaart event-item" data-categorie="sport">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span class="badge badge-beschikbaar">Sport</span>
+                        <span style="font-size:0.76rem; font-weight:600; color:var(--tekst-zwak);">za 5 sep</span>
+                    </div>
+                    <h3 style="margin:0; font-size:1rem;">HAN Running Club</h3>
+                    <p style="margin:0.4rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">Wekelijkse hardloopronde van 5 km langs de Rijn. Alle niveaus welkom.</p>
+                    <div style="margin-top:0.75rem; border-top:1px solid var(--rand-kleur); padding-top:0.6rem; font-size:0.82rem; color:var(--tekst-zwak); display:flex; flex-direction:column; gap:0.25rem;">
+                        <span>&#128337; 17:30 uur</span>
+                        <span>&#128205; Hoofdingang · verzamelen buiten</span>
+                    </div>
+                </div>
+
+                <div class="kaart event-item" data-categorie="lezing">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span class="badge">Lezing</span>
+                        <span style="font-size:0.76rem; font-weight:600; color:var(--tekst-zwak);">wo 9 sep</span>
+                    </div>
+                    <h3 style="margin:0; font-size:1rem;">Gastcollege: AI in de zorg</h3>
+                    <p style="margin:0.4rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">Een expert vertelt hoe AI het zorglandschap verandert.</p>
+                    <div style="margin-top:0.75rem; border-top:1px solid var(--rand-kleur); padding-top:0.6rem; font-size:0.82rem; color:var(--tekst-zwak); display:flex; flex-direction:column; gap:0.25rem;">
+                        <span>&#128337; 11:00 uur</span>
+                        <span>&#128205; D0.01 · Ruitenberglaan 26</span>
+                    </div>
+                </div>
+
+                <div class="kaart event-item" data-categorie="sociaal">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span class="badge badge-primair">Sociaal</span>
+                        <span style="font-size:0.76rem; font-weight:600; color:var(--tekst-zwak);">do 10 sep</span>
+                    </div>
+                    <h3 style="margin:0; font-size:1rem;">Duurzaamheidsmarkt</h3>
+                    <p style="margin:0.4rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">Ontdek duurzame initiatieven van medestudenten en organisaties.</p>
+                    <div style="margin-top:0.75rem; border-top:1px solid var(--rand-kleur); padding-top:0.6rem; font-size:0.82rem; color:var(--tekst-zwak); display:flex; flex-direction:column; gap:0.25rem;">
+                        <span>&#128337; 12:00 uur</span>
+                        <span>&#128205; Centrale hal</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <a class="ai-float" href="Assistent.html" aria-label="Open AI-assistent">
+        <span>HAN</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

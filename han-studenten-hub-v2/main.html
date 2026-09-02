@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <script>if(!localStorage.getItem('han_hub_ingelogd')){location.replace('login.html');}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAN Studenten Hub – Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Ik sta hier alleen dingen te proberen, trust the process-->
+<body class="achtergrond">
+
+    <header class="top-bar">
+        <button class="menu-toggle" aria-label="Menu openen">&#9776;</button>
+        <div class="items-top-bar">
+            <span class="HAN-logo">HAN</span>
+            <span class="tekst-ernaast">Dashboard</span>
+        </div>
+    </header>
+
+    <div class="menu-overlay verborgen"></div>
+
+    <header class="side-menu">
+        <div class="menu-merk">
+            <span class="HAN-logo">HAN</span>
+            <div class="menu-merk-tekst">
+                <p class="menu-merk-titel">Studenten Hub</p>
+                <p class="menu-merk-sub">HAN University</p>
+            </div>
+        </div>
+        <nav class="dashboard-nav">
+            <button class="dashboard-button actief">
+                <a href="main.html">Dashboard</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Profiel.html">Profiel</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="https://han.myx.nl/roster/overview/schedule/0" target="_blank" rel="noopener">Rooster</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Plattegrond.html">Plattegrond</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Activiteiten.html">Extra Activiteiten</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Assistent.html">AI-Assistent</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Apps.html">Apps</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Studentenkamers.html">Studentenkamers</a>
+            </button>
+        </nav>
+        <div class="menu-voettekst">
+            Studenten Hub · voorbeeldweergave. Ingelogde data komt uit myX, Brightspace &amp; OSIRIS.<br>
+            <a href="#" class="uitlog-link" style="color:var(--rood); font-weight:700;">Uitloggen</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <main class="main-content">
+
+            <div class="content-topbar">
+                <div class="content-topbar-links">
+                    <span class="HAN-logo">HAN</span>
+                    <span class="content-topbar-merk">HAN Studenten Hub</span>
+                </div>
+                <a class="profiel-chip" href="Profiel.html">
+                    <span class="profiel-chip-avatar">SB</span>
+                    <span class="profiel-chip-naam">Sam de Boer</span>
+                </a>
+            </div>
+
+            <p class="welkomstlabel">Welkom terug, Sam</p>
+            <div class="pagina-header">
+                <div>
+                    <h1 class="pagina-titel">Alles voor je studie op één plek</h1>
+                    <p class="pagina-beschrijving">Je laatste meldingen staan hieronder — net als op je telefoon. Gebruik de knoppen voor snelle acties.</p>
+                </div>
+            </div>
+
+            <!-- Snelkoppelingen -->
+            <div class="snelknoppen-rij">
+                <a class="snelknop" href="https://han.myx.nl/roster/overview/schedule/0" target="_blank" rel="noopener">
+                    <span class="tegel-icoon">&#128197;</span>
+                    <span class="tegel-label">Rooster &#8599;</span>
+                </a>
+                <a class="snelknop" href="Plattegrond.html">
+                    <span class="tegel-icoon">&#128506;&#65039;</span>
+                    <span class="tegel-label">Plattegrond</span>
+                </a>
+                <a class="snelknop" href="Toetsen.html">
+                    <span class="tegel-icoon">&#128221;</span>
+                    <span class="tegel-label">Je toetsen</span>
+                </a>
+                <a class="snelknop" href="Absentie.html">
+                    <span class="tegel-icoon">&#128203;</span>
+                    <span class="tegel-label">Afwezigheid melden</span>
+                </a>
+            </div>
+
+            <!-- Meldingen (net als op je telefoon) -->
+            <p class="meldingen-groep-titel">Nieuw</p>
+
+            <div class="melding-item">
+                <span class="melding-icoon les">&#128197;</span>
+                <div class="melding-inhoud">
+                    <div class="melding-top-rij">
+                        <p class="melding-titel">Je volgende les begint vandaag</p>
+                        <span class="melding-tijd">nu</span>
+                    </div>
+                    <p class="melding-tekst">Webontwikkeling (practicum) om 10:00–12:00 in C0.18, Ruitenberglaan 31 · docent T. Smit.</p>
+                </div>
+            </div>
+
+            <div class="melding-item">
+                <span class="melding-icoon event">&#127881;</span>
+                <div class="melding-inhoud">
+                    <div class="melding-top-rij">
+                        <p class="melding-titel">Career Café: solliciteren in tech</p>
+                        <span class="melding-tijd">vandaag</span>
+                    </div>
+                    <p class="melding-tekst">Vandaag om 16:00 in de Kantine, Ruitenberglaan 26. Netwerk met bedrijven en verbeter je cv.</p>
+                </div>
+            </div>
+
+            <p class="meldingen-groep-titel">Deze week</p>
+
+            <div class="melding-item">
+                <span class="melding-icoon ec">&#127891;</span>
+                <div class="melding-inhoud">
+                    <div class="melding-top-rij">
+                        <p class="melding-titel">Cijfer binnen voor Statistiek</p>
+                        <span class="melding-tijd">2 dagen geleden</span>
+                    </div>
+                    <p class="melding-tekst">Je hebt een 6.0 gehaald en daarmee 3 EC behaald. Verwerkt in OSIRIS.</p>
+                </div>
+            </div>
+
+            <div class="melding-item">
+                <span class="melding-icoon vakantie">&#127796;</span>
+                <div class="melding-inhoud">
+                    <div class="melding-top-rij">
+                        <p class="melding-titel">Herfstvakantie komt eraan</p>
+                        <span class="melding-tijd">over 47 dagen</span>
+                    </div>
+                    <p class="melding-tekst">Begint op maandag 19 oktober en duurt één week.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <a class="ai-float" href="Assistent.html" aria-label="Open AI-assistent">
+        <span>HAN</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

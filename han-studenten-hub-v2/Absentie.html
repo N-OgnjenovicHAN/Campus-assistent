@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <script>if(!localStorage.getItem('han_hub_ingelogd')){location.replace('login.html');}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAN Studenten Hub – Afwezigheid melden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Ik sta hier alleen dingen te proberen, trust the process-->
+<body class="achtergrond">
+
+    <header class="top-bar">
+        <button class="menu-toggle" aria-label="Menu openen">&#9776;</button>
+        <div class="items-top-bar">
+            <span class="HAN-logo">HAN</span>
+            <span class="tekst-ernaast">Afwezigheid melden</span>
+        </div>
+    </header>
+
+    <div class="menu-overlay verborgen"></div>
+
+    <header class="side-menu">
+        <div class="menu-merk">
+            <span class="HAN-logo">HAN</span>
+            <div class="menu-merk-tekst">
+                <p class="menu-merk-titel">Studenten Hub</p>
+                <p class="menu-merk-sub">HAN University</p>
+            </div>
+        </div>
+        <nav class="dashboard-nav">
+            <button class="dashboard-button">
+                <a href="main.html">Dashboard</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Profiel.html">Profiel</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="https://han.myx.nl/roster/overview/schedule/0" target="_blank" rel="noopener">Rooster</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Plattegrond.html">Plattegrond</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Activiteiten.html">Extra Activiteiten</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Assistent.html">AI-Assistent</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Apps.html">Apps</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Studentenkamers.html">Studentenkamers</a>
+            </button>
+        </nav>
+        <div class="menu-voettekst">
+            Studenten Hub · voorbeeldweergave. Ingelogde data komt uit myX, Brightspace &amp; OSIRIS.<br>
+            <a href="#" class="uitlog-link" style="color:var(--rood); font-weight:700;">Uitloggen</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <main class="main-content">
+
+            <div class="content-topbar">
+                <div class="content-topbar-links">
+                    <span class="HAN-logo">HAN</span>
+                    <span class="content-topbar-merk">HAN Studenten Hub</span>
+                </div>
+                <a class="profiel-chip" href="Profiel.html">
+                    <span class="profiel-chip-avatar">SB</span>
+                    <span class="profiel-chip-naam">Sam de Boer</span>
+                </a>
+            </div>
+
+            <div class="pagina-header">
+                <div>
+                    <h1 class="pagina-titel">Afwezigheid melden</h1>
+                    <p class="pagina-beschrijving">Geef aan wanneer je niet aanwezig kunt zijn. De melding gaat automatisch naar de docent die op dat moment lesgeeft.</p>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="kaart" style="grid-column: span 2;">
+
+                    <div id="absentie-form-wrapper">
+                        <form id="absentie-form">
+                            <div class="tijd-duur-grid">
+                                <div class="form-veld">
+                                    <label class="form-label" for="datum">Datum</label>
+                                    <input class="form-input" type="date" id="datum" name="datum" required>
+                                </div>
+                                <div class="form-veld">
+                                    <label class="form-label" for="tijd">Tijd</label>
+                                    <input class="form-input" type="time" id="tijd" name="tijd" required>
+                                </div>
+                                <div class="form-veld">
+                                    <label class="form-label" for="duur">Duur</label>
+                                    <select class="form-input" id="duur" name="duur">
+                                        <option>Eén les (&plusmn; 1,5 uur)</option>
+                                        <option>Halve dag</option>
+                                        <option>Hele dag</option>
+                                        <option>Meerdere dagen</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p id="les-hint" class="footnote verborgen" style="margin-top:-0.5rem; color:var(--rood); font-weight:700;"></p>
+
+                            <div class="form-veld">
+                                <label class="form-label" for="reden">Reden</label>
+                                <select class="form-input" id="reden" name="reden">
+                                    <option>Ziekte</option>
+                                    <option>Doktersbezoek / afspraak</option>
+                                    <option>Familieomstandigheden</option>
+                                    <option>Reisvertraging</option>
+                                    <option>Anders</option>
+                                </select>
+                            </div>
+
+                            <div class="form-veld reden-anders-veld verborgen" id="reden-anders-veld">
+                                <label class="form-label" for="reden-anders">Toelichting (verplicht bij 'Anders')</label>
+                                <input class="form-input" type="text" id="reden-anders" name="reden-anders" placeholder="Typ hier je reden">
+                            </div>
+
+                            <button type="submit" class="knop knop-primair" style="width:100%;">Melding versturen</button>
+                        </form>
+                    </div>
+
+                    <div id="absentie-succes" class="melding-succes verborgen">
+                        <span class="melding-succes-icoon">&#10003;</span>
+                        <h2 style="margin:0 0 0.4rem;">Melding verstuurd</h2>
+                        <p style="max-width:26rem; margin:0 auto; font-size:0.88rem; color:var(--tekst-zwak);">
+                            Je melding is verstuurd naar <strong id="succes-docent" style="color:var(--tekst-kleur);">je studieadministratie</strong><span id="succes-vak-wrap" class="verborgen"> voor <strong id="succes-vak" style="color:var(--tekst-kleur);"></strong></span>.
+                        </p>
+                        <div class="knop-rij" style="justify-content:center; margin-top:1rem;">
+                            <button type="button" class="knop knop-outline" id="absentie-opnieuw">Nieuwe melding</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:1rem;">
+                    <div class="kaart">
+                        <h2 style="margin:0 0 0.6rem; font-size:1rem;">Goed om te weten</h2>
+                        <ul class="info-lijst">
+                            <li>De docent van de les op het moment dat je opgeeft, krijgt automatisch een seintje.</li>
+                            <li>Meld je absentie zo vroeg mogelijk, liefst vóór aanvang van de les.</li>
+                            <li>Bij tentamens gelden aparte regels — check je opleidingsgids.</li>
+                        </ul>
+                    </div>
+                    <div class="kaart">
+                        <h2 style="margin:0 0 0.6rem; font-size:1rem;">Status recente meldingen</h2>
+                        <div style="display:flex; align-items:center; justify-content:space-between; font-size:0.85rem; margin-bottom:0.5rem;">
+                            <span>Ziekte · 26 aug</span>
+                            <span class="badge badge-beschikbaar">Verwerkt</span>
+                        </div>
+                        <div style="display:flex; align-items:center; justify-content:space-between; font-size:0.85rem;">
+                            <span>Afspraak · 19 aug</span>
+                            <span class="badge badge-beschikbaar">Verwerkt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <a class="ai-float" href="Assistent.html" aria-label="Open AI-assistent">
+        <span>HAN</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <script>if(!localStorage.getItem('han_hub_ingelogd')){location.replace('login.html');}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAN Studenten Hub – AI-assistent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Ik sta hier alleen dingen te proberen, trust the process-->
+<body class="achtergrond">
+
+    <header class="top-bar">
+        <button class="menu-toggle" aria-label="Menu openen">&#9776;</button>
+        <div class="items-top-bar">
+            <span class="HAN-logo">HAN</span>
+            <span class="tekst-ernaast">AI-Assistent</span>
+        </div>
+    </header>
+
+    <div class="menu-overlay verborgen"></div>
+
+    <header class="side-menu">
+        <div class="menu-merk">
+            <span class="HAN-logo">HAN</span>
+            <div class="menu-merk-tekst">
+                <p class="menu-merk-titel">Studenten Hub</p>
+                <p class="menu-merk-sub">HAN University</p>
+            </div>
+        </div>
+        <nav class="dashboard-nav">
+            <button class="dashboard-button">
+                <a href="main.html">Dashboard</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Profiel.html">Profiel</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="https://han.myx.nl/roster/overview/schedule/0" target="_blank" rel="noopener">Rooster</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Plattegrond.html">Plattegrond</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Activiteiten.html">Extra Activiteiten</a>
+            </button>
+            <button class="dashboard-button actief">
+                <a href="Assistent.html">AI-Assistent</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Apps.html">Apps</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Studentenkamers.html">Studentenkamers</a>
+            </button>
+        </nav>
+        <div class="menu-voettekst">
+            Studenten Hub · voorbeeldweergave. Ingelogde data komt uit myX, Brightspace &amp; OSIRIS.<br>
+            <a href="#" class="uitlog-link" style="color:var(--rood); font-weight:700;">Uitloggen</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <main class="main-content">
+
+            <div class="content-topbar">
+                <div class="content-topbar-links">
+                    <span class="HAN-logo">HAN</span>
+                    <span class="content-topbar-merk">HAN Studenten Hub</span>
+                </div>
+                <a class="profiel-chip" href="Profiel.html">
+                    <span class="profiel-chip-avatar">SB</span>
+                    <span class="profiel-chip-naam">Sam de Boer</span>
+                </a>
+            </div>
+
+            <div class="pagina-header">
+                <div>
+                    <h1 class="pagina-titel">AI-studieassistent</h1>
+                    <p class="pagina-beschrijving">Stel je vraag over studeren, de HAN-systemen, de campus of studentenzaken. De assistent verwijst je naar de juiste bron voor persoonlijke gegevens.</p>
+                </div>
+            </div>
+
+            <div class="chat-venster">
+                <div class="chat-berichten">
+                    <div>
+                        <span class="chat-intro-icoon">&#10024;</span>
+                        <h3 style="margin:0 0 0.4rem;">Hoi! Waar kan ik je mee helpen?</h3>
+                        <p style="max-width:22rem; margin:0 auto; font-size:0.88rem; color:var(--tekst-zwak);">Vraag me alles over je studie aan de HAN. Bijvoorbeeld:</p>
+                        <div class="chat-suggesties">
+                            <button type="button" class="chat-suggestie">Waar vind ik mijn rooster?</button>
+                            <button type="button" class="chat-suggestie">Hoe meld ik me af voor een tentamen?</button>
+                            <button type="button" class="chat-suggestie">Wat is het verschil tussen Brightspace en OSIRIS?</button>
+                            <button type="button" class="chat-suggestie">Hoeveel EC heb ik nodig per jaar?</button>
+                            <button type="button" class="chat-suggestie">Waar kan ik rustig studeren op de campus?</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-invoer">
+                    <form id="chat-form">
+                        <div class="chat-invoer-rij">
+                            <textarea class="form-input" rows="1" placeholder="Typ je vraag..."></textarea>
+                            <button type="submit" class="chat-verstuur" aria-label="Verstuur">&#10148;</button>
+                        </div>
+                    </form>
+                    <p class="chat-hint">AI kan fouten maken. Controleer persoonlijke gegevens altijd in myX, Brightspace of OSIRIS.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // De AI-studieassistent draait normaal via een server-functie die berichten
+        // doorstuurt naar een taalmodel. Op deze statische site is die server-functie
+        // niet beschikbaar, dus versturen doet bewust niets (geen foutmelding).
+        document.getElementById('chat-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

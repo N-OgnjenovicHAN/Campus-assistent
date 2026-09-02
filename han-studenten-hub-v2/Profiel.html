@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <script>if(!localStorage.getItem('han_hub_ingelogd')){location.replace('login.html');}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAN Studenten Hub – Profiel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Ik sta hier alleen dingen te proberen, trust the process-->
+<body class="achtergrond">
+
+    <header class="top-bar">
+        <button class="menu-toggle" aria-label="Menu openen">&#9776;</button>
+        <div class="items-top-bar">
+            <span class="HAN-logo">HAN</span>
+            <span class="tekst-ernaast">Profiel</span>
+        </div>
+    </header>
+
+    <div class="menu-overlay verborgen"></div>
+
+    <header class="side-menu">
+        <div class="menu-merk">
+            <span class="HAN-logo">HAN</span>
+            <div class="menu-merk-tekst">
+                <p class="menu-merk-titel">Studenten Hub</p>
+                <p class="menu-merk-sub">HAN University</p>
+            </div>
+        </div>
+        <nav class="dashboard-nav">
+            <button class="dashboard-button">
+                <a href="main.html">Dashboard</a>
+            </button>
+            <button class="dashboard-button actief">
+                <a href="Profiel.html">Profiel</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="https://han.myx.nl/roster/overview/schedule/0" target="_blank" rel="noopener">Rooster</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Plattegrond.html">Plattegrond</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Activiteiten.html">Extra Activiteiten</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Assistent.html">AI-Assistent</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Apps.html">Apps</a>
+            </button>
+            <button class="dashboard-button">
+                <a href="Studentenkamers.html">Studentenkamers</a>
+            </button>
+        </nav>
+        <div class="menu-voettekst">
+            Studenten Hub · voorbeeldweergave. Ingelogde data komt uit myX, Brightspace &amp; OSIRIS.<br>
+            <a href="#" class="uitlog-link" style="color:var(--rood); font-weight:700;">Uitloggen</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <main class="main-content">
+
+            <div class="content-topbar">
+                <div class="content-topbar-links">
+                    <span class="HAN-logo">HAN</span>
+                    <span class="content-topbar-merk">HAN Studenten Hub</span>
+                </div>
+                <a class="profiel-chip" href="Profiel.html">
+                    <span class="profiel-chip-avatar">SB</span>
+                    <span class="profiel-chip-naam">Sam de Boer</span>
+                </a>
+            </div>
+
+            <div class="pagina-header">
+                <div>
+                    <h1 class="pagina-titel">Profiel</h1>
+                    <p class="pagina-beschrijving">Je gegevens en je studievoortgang, per vak onder elkaar.</p>
+                </div>
+                <div class="knop-rij">
+                    <a class="knop knop-outline" href="https://osiris.han.nl" target="_blank" rel="noopener">Open OSIRIS &#8599;</a>
+                </div>
+            </div>
+
+            <div class="kaart" style="margin-bottom:1.5rem;">
+                <div class="profiel-kop" style="margin-bottom:0;">
+                    <span class="profiel-avatar">SB</span>
+                    <div>
+                        <p style="margin:0; font-size:1.15rem; font-weight:800;">Sam de Boer</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.85rem; color:var(--tekst-zwak);">HBO-ICT · Software Engineering · Jaar 2</p>
+                        <p style="margin:0.1rem 0 0; font-size:0.8rem; color:var(--tekst-zwak);">1234567 · sam.deboer@student.han.nl</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kop-rij">
+                <h2 style="font-size:1.1rem; margin:0;">Studievoortgang</h2>
+                <span class="badge badge-primair">108/240 EC · gemiddeld 7.4</span>
+            </div>
+            <div class="voortgangsbalk" style="margin-bottom:0.4rem;"><div class="voortgangsbalk-vulling groen" style="width:45%;"></div></div>
+            <p class="footnote" style="margin-top:0; margin-bottom:1.25rem;">Jaar 2 · Periode 1 — 45% van je opleiding afgerond.</p>
+
+            <!-- Voortgang per vak, onder elkaar -->
+            <div style="display:flex; flex-direction:column; gap:0.6rem;">
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem;">&#9989; Programmeren 1</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">5 EC · behaald</p>
+                    </div>
+                    <span style="font-size:1.2rem; font-weight:800;">8.0</span>
+                </div>
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem;">&#9989; Programmeren 2</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">5 EC · behaald</p>
+                    </div>
+                    <span style="font-size:1.2rem; font-weight:800;">7.0</span>
+                </div>
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem; color:var(--tekst-zwak);">&#9675; Databases</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">5 EC · nog niet behaald</p>
+                    </div>
+                    <span class="badge">bezig</span>
+                </div>
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem; color:var(--tekst-zwak);">&#9675; Softwarekwaliteit</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">5 EC · nog niet behaald</p>
+                    </div>
+                    <span class="badge">bezig</span>
+                </div>
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem; color:var(--tekst-zwak);">&#9675; Project Fullstack</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">10 EC · nog niet behaald</p>
+                    </div>
+                    <span class="badge">bezig</span>
+                </div>
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem;">&#9989; Statistiek</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">3 EC · behaald</p>
+                    </div>
+                    <span style="font-size:1.2rem; font-weight:800;">6.0</span>
+                </div>
+
+                <div class="kaart" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+                    <div>
+                        <p style="margin:0; font-weight:700; font-size:0.92rem;">&#9989; Bedrijfskunde</p>
+                        <p style="margin:0.2rem 0 0; font-size:0.78rem; color:var(--tekst-zwak);">3 EC · behaald</p>
+                    </div>
+                    <span style="font-size:1.2rem; font-weight:800;">8.0</span>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <a class="ai-float" href="Assistent.html" aria-label="Open AI-assistent">
+        <span>HAN</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
