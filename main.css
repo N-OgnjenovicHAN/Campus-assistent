@@ -1,4 +1,16 @@
 body {
     background-color: #fbfaf9;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+top-bar {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    
 }
